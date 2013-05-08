@@ -22,7 +22,7 @@ def move_n_seconds(move_fn, n_seconds=2.0):
 
 
 if __name__ == "__main__":
-    from bottle import route, run, static_file
+    from bottle import route, run, static_file, redirect
 
     @route('/')
     def index():
@@ -34,38 +34,32 @@ if __name__ == "__main__":
 
     @route('/left', method='POST')
     def left():
-        print "Left"
         move_n_seconds(turret.launcher.turretLeft)
-        return "Left"
+        return redirect('/')
 
     @route('/right', method='POST')
     def right():
-        print "Right"
         move_n_seconds(turret.launcher.turretRight)
-        return "Right"
+        return redirect('/')
 
     @route('/down', method='POST')
     def down():
-        print "Down"
         move_n_seconds(turret.launcher.turretDown)
-        return "Down"
+        return redirect('/')
 
     @route('/up', method='POST')
     def up():
-        print "Up"
         move_n_seconds(turret.launcher.turretUp)
-        return "Up"
+        return redirect('/')
 
     @route('/stop', method='POST')
     def stop():
-        print "Stop"
         turret.launcher.turretStop()
-        return "Stop"
+        return redirect('/')
 
     @route('/fire', method='POST')
     def fire():
-        print "Fire"
         turret.launcher.turretFire()
-        return "Fire"
+        return redirect('/')
 
     run(host='0.0.0.0', port=8080, debug=True)
