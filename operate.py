@@ -13,7 +13,7 @@ current_dir = os.path.dirname(os.path.realpath(__file__))
 static_dir = os.path.abspath(os.path.join(current_dir, "static"))
 
 
-def move_n_seconds(move_fn, n_seconds=2.0):
+def move_n_seconds(move_fn, n_seconds=0.5):
     print move_fn
     move_fn()
     time.sleep(n_seconds)
