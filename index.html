@@ -1,62 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Turret Control</title>
-</head>
-<body>
-  <div align="center">
-  <table>
-    <tr>
-      <td></td>
-      <td>
-        <form name="turret-up" action="up" method="POST">
-          <div align="center">
-          <br><input type="submit" value="Up"><br>
-          </div>
-        </form>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        <form name="turret-left" action="left" method="POST">
-          <div align="center">
-          <br><input type="submit" value="Left"><br>
-          </div>
-        </form>
-      </td>
-      <td>
-        <form name="turret-fire" action="fire" method="POST">
-          <div align="center">
-          <br><input type="submit" value="Fire"><br>
-          </div>
-        </form>
-      </td>
-      <td>
-        <form name="turret-right" action="right" method="POST">
-          <div align="center">
-          <br><input type="submit" value="Right"><br>
-          </div>
-        </form>
-      </td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>
-        <form name="turret-down" action="down" method="POST">
-          <div align="center">
-          <br><input type="submit" value="Down"><br>
-          </div>
-        </form>
-      </td>
-      <td></td>
-    </tr>
-  </table>
-  </div>
-  <form name="turret-stop" action="stop" method="POST">
-    <div align="center">
-    <br><input type="submit" value="Stop!"><br>
-    </div>
-  </form>
-</body>
+  <head>
+    <title>Turret Control</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <button name="north">
+      <p>North</p>
+    </button>
+    <button name="east">
+      <p>East</p>
+    </button>
+    <button name="west">
+      <p>West</p>
+    </button>
+    <button name="south">
+      <p>South</p>
+    </button>
+    <button name="fire">
+      <p>FIRE!</p>
+    </button>
+    <div class="clear"></div>
+  </body>
 </html>
