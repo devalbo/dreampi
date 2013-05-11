@@ -30,6 +30,7 @@ if __name__ == "__main__":
 
     @route('/static/<filepath:path>')
     def server_static(filepath):
+        print "STATIC: %s" % static_dir
         return static_file(filepath, root=static_dir)
 
     @route('/left', method='POST')
@@ -62,4 +63,4 @@ if __name__ == "__main__":
         turret.launcher.turretFire()
         return redirect('/')
 
-    run(host='0.0.0.0', port=8080, debug=True)
+    run(host='0.0.0.0', port=8080, debug=False)
