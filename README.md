@@ -7,7 +7,7 @@ from a website hosted by a Raspberry Pi? So did I. Here's how I'm doing it...
 * Get a Raspberry Pi running Raspbian (see http://devalbo.blogspot.com/2013/03/first-steps.html)
 * Plug the Dream Cheeky launcher into your Raspberry Pi
 * Connect to your Raspberry Pi and open a terminal connection
-* Make sure you're using the latest updates for Raspbian (run 'sudo apt-get update')
+* Make sure you're using the latest updates for Raspbian (run `sudo apt-get update`)
 * Get your Python development tools set up (assuming a fresh install)
   - Run 'sudo apt-get install python-pip'
   - Run 'sudo pip install virtualenv'
