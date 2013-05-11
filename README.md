@@ -1,8 +1,8 @@
 dreampi
 =======
 
-Want to run a <a target="_blank" href="http://www.amazon.com/s/?_encoding=UTF8&camp=1789&creative=390957&field-keywords=dream%20cheeky&linkCode=ur2&sprefix=dream%20chee%2Caps%2C165&tag=devalbo-20&url=search-alias%3Dtoys-and-games">Dream Cheeky USB foam dart launcher</a><img src="https://www.assoc-amazon.com/e/ir?t=devalbo-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />from a website hosted by a Raspberry Pi? So do I. Here's how I'm doing
-it...
+Want to run a <a target="_blank" href="http://www.amazon.com/s/?_encoding=UTF8&camp=1789&creative=390957&field-keywords=dream%20cheeky&linkCode=ur2&sprefix=dream%20chee%2Caps%2C165&tag=devalbo-20&url=search-alias%3Dtoys-and-games">Dream Cheeky USB foam dart launcher</a><img src="https://www.assoc-amazon.com/e/ir?t=devalbo-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+from a website hosted by a Raspberry Pi? So did I. Here's how I'm doing it...
 
 * Get a Raspberry Pi running Raspbian (see http://devalbo.blogspot.com/2013/03/first-steps.html)
 * Plug the Dream Cheeky launcher into your Raspberry Pi
