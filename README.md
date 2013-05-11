@@ -15,7 +15,7 @@ it...
 * Run source venv/bin/activate
 * Run 'pip install -r requirements.txt'
 * Run 'python operate.py'
-* Open a browser and navigate to your Raspberry Pi's IP address and port 8080 (e.g. http://192.168.0.11:8080) to start
+* Open a browser and navigate to your Raspberry Pi's IP address (e.g. http://192.168.0.11) to start
 operating your Dream Cheeky launcher
 
 Inspiration and software based on this blog post: https://github.com/AlexNisnevich/sentinel
