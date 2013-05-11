@@ -30,7 +30,6 @@ if __name__ == "__main__":
 
     @route('/static/<filepath:path>')
     def server_static(filepath):
-        print "STATIC: %s" % static_dir
         return static_file(filepath, root=static_dir)
 
     @route('/left', method='POST')

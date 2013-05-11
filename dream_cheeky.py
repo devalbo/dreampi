@@ -80,12 +80,12 @@ class LauncherDriver():
 class Turret():
     def __init__(self, opts):
         self.opts = opts
-        self.launcher = LauncherDriver()
+        # self.launcher = LauncherDriver()
         self.missiles_remaining = 4
-        
+
         # initial setup
         self.center()
-        self.launcher.ledOff()
+        # self.launcher.ledOff()
         self.cooldown_time = 3
         self.killcam_count = 0
 
@@ -93,15 +93,15 @@ class Turret():
     def center(self):
         print 'Initializing turret ...'
 
-        self.launcher.turretLeft()
-        time.sleep(4)
-        self.launcher.turretRight()
-        time.sleep(2)
-        self.launcher.turretStop()
-
-        self.launcher.turretUp()
-        time.sleep(1)
-        self.launcher.turretDown()
-        time.sleep(0.25)
-        self.launcher.turretStop()
+        # self.launcher.turretLeft()
+        # time.sleep(4)
+        # self.launcher.turretRight()
+        # time.sleep(2)
+        # self.launcher.turretStop()
+        #
+        # self.launcher.turretUp()
+        # time.sleep(1)
+        # self.launcher.turretDown()
+        # time.sleep(0.25)
+        # self.launcher.turretStop()
         print "Done centering..."
