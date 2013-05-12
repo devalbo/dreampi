@@ -1,4 +1,4 @@
-dreampi
+dreampi - Raspberry Pi-powered USB nerf turret
 =======
 
 <img src="https://lh3.googleusercontent.com/-tb2DVWezq2E/UY6_VrMnnyI/AAAAAAAAFL0/ZrEgFtUA20g/w816-h612-no/IMG_20130511_164749.jpg"/>
