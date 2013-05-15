@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# on Raspbian, put this file in /etc/init.d, then run update-rc.d start-dreampi.sh defaults
+
+cd /home/pi/Projects/dreampi
+sudo venv/bin/python flask_operate.py
