@@ -19,7 +19,7 @@ input:focus { outline: 0; }
 
 img { border: none; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 
-html{
+html {
 	font-family:; "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -31,13 +31,13 @@ html{
 	text-rendering:			optimizeLegibility;
 	min-width: 100%;
 	min-height: 100%;
-	padding: 150px 0 0 0;
-	background-color: rgba(42, 37, 32, 1.0);
+	padding: 200px 0 0 0;
+	background-color: white /*rgba(42, 37, 32, 1.0)*/;
 }
 
 body {
-	width: 400px;
-	height: 400px;
+	width: 600px;
+	height: 600px;
 	position: relative;
 	margin: 0 auto;
 	overflow: hidden;
@@ -45,14 +45,35 @@ body {
 	-moz-transform:		rotate(45deg);
 	transform:			rotate(45deg);
 	padding: 2%;
-	border: 1px solid rgba(235, 172, 32, 0.5);
+	border: 1px solid gainsboro;
 	-webkit-border-radius: 		15px; 
 	-moz-border-radius:			15px; 
 	border-radius: 				15px; 
+	box-shadow: inset 0 0 15px gainsboro, 0 0 15px gainsboro;
 }
 
 body,
 button { -webkit-box-sizing: border-box; -moz-box-sizing: border-box;  box-sizing: border-box; }
+
+i.arrow {
+	width: 50px;
+	height: 50px;
+	display: block;
+	background-image: url("turretsprite.png");
+	background-repeat: no-repeat;
+	background-position: -50px 0;
+	margin: 0 auto;
+}
+
+i.boom {
+	width: 50px;
+	height: 50px;
+	display: block;
+	background-image: url("turretsprite.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	margin: 0 auto;
+}
 
 button {
 	min-width: 50%;
@@ -81,6 +102,10 @@ button[name="north"] {
 	-moz-border-radius:			15px 0 0 0; 
 	border-radius: 				15px 0 0 0; 
 }
+button[name="north"] i.arrow { 
+	-webkit-transform: rotate(-90deg); 
+}
+
 button[name="east"] {	
 	-webkit-border-radius:		0 15px 0 0;
 	-moz-border-radius:			0 15px 0 0;
@@ -91,18 +116,27 @@ button[name="south"] {
 	-moz-border-radius:			0 0 15px 0;
 	border-radius:				0 0 15px 0;
 }
+button[name="south"] i.arrow { 
+	-webkit-transform: rotate(90deg); 
+}
+
 button[name="west"] {	
 	-webkit-border-radius:		0 0 0 15px;
 	-moz-border-radius:			0 0 0 15px;
 	border-radius:				0 0 0 15px;
 }
 
+button[name="west"] i.arrow { 
+	-webkit-transform: rotate(180deg); 
+}
+
 button[name="fire"] {
 	-webkit-border-radius:		50%;
 	-moz-border-radius:			50%;
 	border-radius:				50%;
-	background-color: firebrick;
-	color: white;
+	background-color: white;
+	border: 2px solid gray;
+	color: black;
 	min-width: 25%; 
 	max-width: 25%;
 	min-height: 25%;
@@ -114,42 +148,30 @@ button[name="fire"] {
 }
 
 button[name="fire"]:hover {
-	background-color: maroon;
+	background-color: red;
+	color: white;
 	-webkit-box-shadow: inset 0 0 10px black;
 	-moz-box-shadow: inset 0 0 10px black;
 	box-shadow: inset 0 0 10px black;
 }
 
-button[name="north"],
-button[name="east"],
-button[name="south"],
-button[name="west"],
-button[name="fire"] {
-	-webkit-transition: background-color 0.3s linear;
-	-moz-transition: background-color 0.3s linear;
-	transition: background-color 0.3s linear;
-}
+
 
 button[name="north"]:active,
 button[name="east"]:active,
 button[name="south"]:active,
 button[name="west"]:active,
 button[name="fire"]:active {
-	-webkit-transition: none;
-	-moz-transition: none;
-	transition: none;
 	-webkit-box-shadow: inset 0 0 20px black;
 	-moz-box-shadow: inset 0 0 20px black;
 	box-shadow: inset 0 0 20px black;
 }
-
 
 button p {
 	-webkit-transform:	rotate(-45deg);
 	-moz-transform:		rotate(-45deg);
 	transform:			rotate(-45deg);
 }
-
 
 
 
