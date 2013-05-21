@@ -1,27 +1,22 @@
 
 import os
 import time
-from optparse import OptionParser
 import dream_cheeky
+from flask import Flask, redirect, send_file, make_response
+from functools import update_wrapper
 
-parser = OptionParser()
-opts, args = parser.parse_args()
+turret = dream_cheeky.Turret()
 
-turret = dream_cheeky.Turret(opts)
-
-current_dir = os.path.dirname(os.path.realpath(__file__))
-static_dir = os.path.abspath(os.path.join(current_dir, "static"))
+app = Flask(__name__)
 
 
 def move_n_seconds(move_fn, n_seconds=0.5):
     print move_fn
     move_fn()
     time.sleep(n_seconds)
-    turret.launcher.turretStop()
+    turret.turretStop()
     print "done"
-    
-from flask import make_response
-from functools import update_wrapper
+
 
 def nocache(f):
     def new_func(*args, **kwargs):
@@ -29,10 +24,6 @@ def nocache(f):
         resp.cache_control.no_cache = True
         return resp
     return update_wrapper(new_func, f)
-
-
-from flask import Flask, redirect, send_file
-app = Flask(__name__)
 
 @app.route('/')
 @nocache
@@ -42,39 +33,39 @@ def index():
 @app.route('/left', methods=['POST'])
 @nocache
 def left():
-    move_n_seconds(turret.launcher.turretLeft)
+    move_n_seconds(turret.turretLeft)
     return redirect('/')
 
 @app.route('/right', methods=['POST'])
 @nocache
 def right():
-    move_n_seconds(turret.launcher.turretRight)
+    move_n_seconds(turret.turretRight)
     return redirect('/')
 
 @app.route('/down', methods=['POST'])
 @nocache
 def down():
-    move_n_seconds(turret.launcher.turretDown)
+    move_n_seconds(turret.turretDown)
     return redirect('/')
 
 @app.route('/up', methods=['POST'])
 @nocache
 def up():
-    move_n_seconds(turret.launcher.turretUp)
+    move_n_seconds(turret.turretUp)
     return redirect('/')
 
 @app.route('/stop', methods=['POST'])
 @nocache
 def stop():
-    turret.launcher.turretStop()
+    turret.turretStop()
     return redirect('/')
 
 @app.route('/fire', methods=['POST'])
 @nocache
 def fire():
-    turret.launcher.turretFire()
+    turret.turretFire()
     return redirect('/')
 
 app.run(host='0.0.0.0',
-        port=80,
+        port=8000,
         debug=False)
