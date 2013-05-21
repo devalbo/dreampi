@@ -1,12 +1,10 @@
 
-import os
 import time
 import dream_cheeky
 from flask import Flask, redirect, send_file, make_response
 from functools import update_wrapper
 
 turret = dream_cheeky.Turret()
-
 app = Flask(__name__)
 
 
